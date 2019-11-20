@@ -31,4 +31,4 @@ To get the N cheapest items avaiable, the url is `localhost:5000/cheapest/<count
 
 - Items with no price included are ignored in this case. Only items with a price >= 0.0 will be considered. 
 
-![Hire Me Pls](https://giphy.com/gifs/WmiUymPgVIBvUgJePZ)
+![Hire Me Pls] (https://giphy.com/gifs/WmiUymPgVIBvUgJePZ)
