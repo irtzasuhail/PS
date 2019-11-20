@@ -12,7 +12,10 @@ def search(item_id):
         :param item_id: String, the item's unique ID.
         :return: Item: JSON, a JSON copy of the item's details.
     '''
-    return app.config.get('dict_data')[str(item_id)].toJSON()
+    try:
+        return app.config.get('dict_data')[str(item_id)].toJSON()
+    except:
+        return json.dumps("Object not found.")
 
 
 @app.route('/cheapest/<count>')
