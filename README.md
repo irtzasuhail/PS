@@ -27,6 +27,10 @@ To get the N cheapest items avaiable, the url is `localhost:5000/cheapest/<count
 
 ## Assumptions
 
+## Overall Structure
+
+I made the decision to store the data in two different ways in memory. First, there is a dictionary which maps the data to its unique ID and secondly, there is a list of items sorted by price. This list excludes items which had no price in the files. This results in a longer initial loading of the data but has benefits for the user. The benefit of this is that the API endpoints, search by ID and get N cheapest, return their results very quickly, as the data is alreay sorted and stored in a way to make the lookups efficient. 
+
 ### Get Cheapest
 
 - Items with no price included are ignored in this case. Only items with a price >= 0.0 will be considered. 
